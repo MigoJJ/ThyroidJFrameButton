@@ -17,7 +17,7 @@ class ThyroidEnterFrame extends JFrame {
 			                { "Jane", new Integer(32), "Female" },
 			                { "Bob", new Integer(45), "Male" },
 			        };
-			        String[] columnHeaders = { "Name", "Age", "Gender" };
+			        String[] columnHeaders = { "Name", "Age",  "Gender"};
 			        JTable table = new JTable(data, columnHeaders);
 			        JScrollPane scrollPane = new JScrollPane(table);
 	        pa.add(scrollPane, BorderLayout.WEST);
