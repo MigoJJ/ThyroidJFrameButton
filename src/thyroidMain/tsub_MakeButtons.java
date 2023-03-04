@@ -23,7 +23,7 @@ public class tsub_MakeButtons extends ThyroidEnterFrame {
 			textField.setColumns(40); // set the preferred number of columns to 20
 			textField.setBounds(50, 50, 200, 130);
 			textField.setVisible(true);
-			textField.setHorizontalAlignment(JTextField.CENTER);
+//			textField.setHorizontalAlignment(JTextField.SOUTH);
 
 		return textField;
     }

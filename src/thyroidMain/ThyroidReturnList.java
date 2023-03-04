@@ -1,5 +1,8 @@
 package thyroidMain;
 
+import java.awt.Component;
+import java.awt.Font;
+
 import javax.swing.BoxLayout;	
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -14,6 +17,8 @@ public class ThyroidReturnList extends ThyroidEnterFrame {
         for (int i = 0; i < result.length; i++) {
             panel.add(new JLabel(result[i]));
         }
+		Font newFont = new Font("Arial", Font.BOLD, 18); // Replace with your desired font
+		panel.setFont(newFont);
         return panel;
     }
 
