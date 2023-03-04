@@ -1,8 +1,8 @@
-package frameMain;
+package thyroidMain;
 
 import javax.swing.JButton;
 
-public class MakeButtons {
+public class tsub_MakeButtons {
     
 	public static JButton createButton(String label) {
         // Create the button
