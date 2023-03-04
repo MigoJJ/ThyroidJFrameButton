@@ -1,0 +1,65 @@
+package thyroidMain;
+
+import javax.swing.BoxLayout;	
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class ThyroidReturnList extends ThyroidEnterFrame {
+    public static JPanel thyroidReturnList(String itemtitle) {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
+        String[] result = thyroidEnter(itemtitle);
+        for (int i = 0; i < result.length; i++) {
+            panel.add(new JLabel(result[i]));
+        }
+        return panel;
+    }
+
+    public static String[] thyroidEnter(String item) {
+        String[] strs = null;
+        switch (item) {
+            case "Patientvisitfor":
+                strs = new String[] {
+                        "1....New Patient",
+                        "        " + "11....Hyperthryoridism",
+                        "        " + "12....Hypothyroidism",
+                        "        " + "13....Non-thyroidal illness : NTI",
+                        "        " + "14....TFT abnormality in routine check",
+                        "   ",
+                        "2	Hyperthryoridism F/U",
+                        "3	Hypothyroidism F/U",
+                        "	31	Hypothyroidism F/U c/w Hashimotoo' thyroiditis",
+                        "	32	Hypothyroidism F/U post PTC op[+]",
+                        "   ",
+                        "1	Pregnancy Patient",
+                        "	11	Hyperthryoridism with pregnancy",
+                        "	12	Hypothyroidism with pregnancy",
+                        "	13 	NTI with pregnancy",
+                        "	14 TFT abnormality in routine check with pregnancy",
+                };
+                break;
+            case "Symptome":
+                strs = new String[] {
+                        "Label Sx ThyroidEnter1Hyperthryoridism",
+                        "Label Sx  ThyroidEnter1Hyperthryoridism1",
+                        "Label SX    ThyroidEnter1Hyperthryoridism2",
+                        "Label Sx	Hyperthryoridism",
+                        "Label Hyperthryoridism1",
+                        "Label Hyperthryoridism2",
+                        "Label Hyperthryoridism",
+                        "Label Hyperthryoridism1",
+                        "Label ThyroidEnter1Hyperthryoridism1",
+                        "Label ThyroidEnter1Hyperthryoridism2",
+                        "Label Hyperthryoridism",
+                        "Label Hyperthryoridism1",
+                        "Label Hyperthryoridism2",
+                        "Label Hyperthryoridism",
+                        "Label ThyroidEnter1Hyperthryoridism2"
+                };
+                break;
+        }
+        return strs;
+    }
+}
