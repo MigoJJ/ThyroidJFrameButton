@@ -7,15 +7,24 @@ class ThyroidEnterFrame extends JFrame {
     ThyroidEnterFrame() {
         // Create a JPanel for the main content area
         JPanel pa = new JPanel();
-	        pa.setLayout(new BorderLayout());
-	        pa.add(new JButton("Layout"), BorderLayout.EAST);
+	       pa.setLayout(new BorderLayout());
+	       pa.add(new JButton("Layout"), BorderLayout.EAST);
 
-        JButton buttonW = new JButton("Border");
-	        buttonW.setPreferredSize(new Dimension(300, buttonW.getPreferredSize().height));
-	        pa.add(buttonW, BorderLayout.WEST);
+	     // create a new JPanel to hold the JTable
+        JPanel tablePanel = new JPanel();
+			        Object[][] data = {
+			                { "John", new Integer(25), "Male" },
+			                { "Jane", new Integer(32), "Female" },
+			                { "Bob", new Integer(45), "Male" },
+			        };
+			        String[] columnHeaders = { "Name", "Age", "Gender" };
+			        JTable table = new JTable(data, columnHeaders);
+			        JScrollPane scrollPane = new JScrollPane(table);
+	        pa.add(scrollPane, BorderLayout.WEST);
+
 
         // Create a panel containing the returned list with proper indentation
-        JPanel returnedPanel = ThyroidReturnList.thyroidReturnList("Symptome");
+        JPanel returnedPanel = ThyroidReturnList.thyroidReturnList("Patientvisitfor");
 	        Font newFont = new Font("Arial", Font.PLAIN, 16);
 	        returnedPanel.setFont(newFont);
 	        Component[] components = returnedPanel.getComponents();
@@ -51,11 +60,12 @@ class ThyroidEnterFrame extends JFrame {
 	        textFieldPanel.add(textField);
 
         // Add the top and bottom button panels and the text field panel to the main content panel
-        pa.add(buttonPaneltop, BorderLayout.NORTH);
+        pa.add(buttonPaneltop, BorderLayout.SOUTH);
+        
         JPanel southPanel = new JPanel(new FlowLayout()); // or new GridLayout(rows, columns)
 			southPanel.add(buttonPanel);
 			southPanel.add(textFieldPanel);
-			pa.add(southPanel, BorderLayout.SOUTH);
+			pa.add(southPanel, BorderLayout.NORTH);
 
         // Add the main content panel to the JFrame
         add(pa);

@@ -17,7 +17,7 @@ public class tsub_MakeButtons extends ThyroidEnterFrame {
 	}
 	
 	public static JTextField createTextField() {
-		JTextField textField = new JTextField("Enter text here");
+		JTextField textField = new JTextField("Enter text here....");
 			Font font = new Font("Arial", Font.PLAIN, 18); // create a new font object with size 18
 			textField.setFont(font);
 			textField.setColumns(40); // set the preferred number of columns to 20
